@@ -25,7 +25,6 @@
             padding: 20px;
             border: 5px solid #ccc;
             border-radius: 5px;
-            shadow: 5px 5px 5px green;
         }
         button{
             margin: 20px;
@@ -36,6 +35,8 @@
             margin: 10px;
             border: 2px dotted black;
         }
+
+        
     </style>
 </head>
 <body>
@@ -66,7 +67,7 @@
             <label for="app_points" class="form-label">App Points:</label>
             <input type="text" class="form-control" id="app_points" name="app_points" value="{{ app_form.app_points.value|default:'' }}">
         </div>
-        <button type="submit" class="btn btn-outline-primary" name='add_app'>Add App</button>
+        <button type="submit" class="btn btn-outline-primary">Add App</button>
     </form>
 
     <h3>All Apps</h3>
@@ -125,7 +126,7 @@
                     <!-- Display the screenshot image -->
                     <td>
                         {% if user.screenshot %}
-                            <img src="/media/{{ user.screenshot.name }}" alt="Screenshot" width="100">
+                            <img src="{{ user.screenshot.url }}" alt="Screenshot" width="100">
                         {% else %}
                             No screenshot available
                         {% endif %}
