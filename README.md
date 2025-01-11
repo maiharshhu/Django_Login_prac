@@ -1,1 +1,1 @@
-"# Django_chat_app" 
+"# Django login practice test project" 
